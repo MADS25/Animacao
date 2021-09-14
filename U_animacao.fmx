@@ -1,0 +1,88 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 388
+  ClientWidth = 313
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object btn_play: TButton
+    Cursor = crHandPoint
+    Enabled = False
+    Position.X = 120.000000000000000000
+    Position.Y = 264.000000000000000000
+    Scale.X = 2.000000000000000000
+    Scale.Y = 2.000000000000000000
+    Size.Width = 25.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'playtoolbutton'
+    TabOrder = 0
+    Text = 'btn_play'
+    OnClick = btn_playClick
+  end
+  object crcl1: TCircle
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFF20968A
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = claWhite
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StartPosition.Y = 1.000000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Fill.Gradient.StopPosition.Y = 0.000000000000000000
+    Position.X = 56.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 233.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claCadetblue
+    Stroke.Thickness = 15.000000000000000000
+    Stroke.Dash = Dot
+    object fltnmtn1: TFloatAnimation
+      Duration = 0.200000002980232200
+      OnProcess = fltnmtn1Process
+      PropertyName = 'RotationAngle'
+      StartValue = 0.000000000000000000
+      StopValue = 360.000000000000000000
+    end
+  end
+  object txt_duracao: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Position.X = 152.000000000000000000
+    Position.Y = 352.000000000000000000
+    Size.Width = 49.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnKeyUp = txt_duracaoKeyUp
+  end
+  object lbl_duracao: TLabel
+    Position.X = 152.000000000000000000
+    Position.Y = 328.000000000000000000
+    Size.Width = 49.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Dura'#231#227'o'
+  end
+  object btn_pause: TSpeedButton
+    Enabled = False
+    Position.X = 176.000000000000000000
+    Position.Y = 264.000000000000000000
+    Scale.X = 2.000000000000000000
+    Scale.Y = 2.000000000000000000
+    Size.Width = 25.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pausetoolbutton'
+    Text = 'btn_pause'
+    OnClick = btn_pauseClick
+  end
+end
